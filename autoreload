@@ -22,7 +22,7 @@ def print_stdout(process):
 
 
 # We concatenate all of the arguments together, and treat that as the command to run
-command = sys.argv[1] + ' ' + os.path.join(os.path.abspath('.'), ' '.join(sys.argv[2:]))
+command ='clear;' + sys.argv[1] + ' ' + os.path.join(os.path.abspath('.'), ' '.join(sys.argv[2:]))
 
 # The path to watch
 path = '.'
@@ -42,7 +42,7 @@ while True:
     print_stdout(process)
     if max_mtime > last_mtime:
         last_mtime = max_mtime
-        print('[bold red]Restarting process.[/bold red]')
+        print('[bold blue]Restarting process.[/]')
         process.kill()
         process = subprocess.Popen(command, shell=True)
     time.sleep(wait)
