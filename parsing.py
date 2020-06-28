@@ -73,6 +73,7 @@ def parsing(problem_num):
 
     f = open('u_{}.py'.format(problem_num), 'w')
     f.write(content)
+    f.write('\n\nif __name__ == "__main__":\n    t_case = []\n')
 
     if args == None:
         print('args None')
@@ -86,8 +87,6 @@ def parsing(problem_num):
         print('thead != args')
         f.close()
         return
-        
-    f.write('\n\nif __name__ == "__main__":\n    t_case = []\n')
     
     t_case = "    t_case.append([{}]) # return {}\n"
 
@@ -99,7 +98,7 @@ def parsing(problem_num):
             continue
         test_case.append(tb.text)
     
-    f.write('    for tc in t_case:\n        print(solution(*tc))')
+    f.write('\n    for tc in t_case:\n        print(solution(*tc))')
     f.close()
 
 if __name__ == "__main__":
