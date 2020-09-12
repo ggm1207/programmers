@@ -33,14 +33,7 @@ def solution(food_times, k):
 
 if __name__ == "__main__":
     t_case = []
-    # t_case.append([[3, 1, 2], 5])  # return 1
-    # t_case.append([[1, 1, 1, 1, 1, 1, 1, 1], 5])  # return 6
-    # t_case.append([[1, 1, 1, 1, 1, 1, 1, 1], 9])  # return -1
-    # t_case.append([[1, 2, 3, 4, 5, 6, 7, 8], 9])  # return 2
-    # t_case.append([[8, 7, 6, 5, 4, 3, 2, 1], 9])  # return 2
-    t_case.append([[8, 7, 6, 5, 4, 3, 2, 1], 60])  # return -1
-    t_case.append([[8, 7, 6, 5, 4, 3, 2, 1], 36])  # return 1
-    t_case.append([[1], 1])  # return 1
+    t_case.append([[3, 1, 2], 5])  # return 1
 
     for tc in t_case:
         print(solution(*tc))
