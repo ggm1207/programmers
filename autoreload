@@ -4,8 +4,6 @@ import sys
 import time
 import subprocess
 
-from rich import print
-
 def file_filter(name):
     return (not name.startswith(".")) and (not name.endswith(".swp"))
 
